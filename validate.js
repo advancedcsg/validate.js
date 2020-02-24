@@ -460,16 +460,6 @@
 
       for (i = 0; i < keypath.length; ++i) {
         switch (keypath[i]) {
-          case '.':
-            if (escape) {
-              escape = false;
-              key += '.';
-            } else {
-              object = callback(object, key, false);
-              key = "";
-            }
-            break;
-
           case '\\':
             if (escape) {
               escape = false;
